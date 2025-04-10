@@ -130,7 +130,6 @@
 
       const container = document.getElementById("anim");
 
-      // Initial render
       function renderWords(arr) {
         container.innerHTML = "";
         arr.forEach((word) => {
@@ -141,7 +140,6 @@
         });
       }
 
-      // Fisher-Yates Shuffle
       function shuffle(array) {
         let currentIndex = array.length,
           randomIndex;
@@ -150,7 +148,6 @@
           randomIndex = Math.floor(Math.random() * currentIndex);
           currentIndex--;
 
-          // Swap
           [array[currentIndex], array[randomIndex]] = [
             array[randomIndex],
             array[currentIndex],
@@ -162,7 +159,7 @@
 
       // Start changing positions every 100ms
       setInterval(() => {
-        const shuffled = shuffle([...words]); // Clone before shuffle
+        const shuffled = shuffle([...words]);
         renderWords(shuffled);
       }, 100);
     </script>
