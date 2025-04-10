@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Wavefont:wght@4..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css.css" />
+    <title>Daniel's Profile</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="p-4">
+    <div class="flex flex-col h-[69vh] justify-center relative" id="header">
+      <img src="./image.png" class="absolute top-25 left-35 w-45 rounded-lg" />
+      <h1
+        class="text-5xl font-bold text-center p-2 font-bold bg-gradient-to-r from-indigo-500 to-gray-500 bg-clip-text text-transparent"
+      >
+        Hi, I'm Daniel
+      </h1>
+      <p
+        class="text-center font-bold bg-gradient-to-r from-gray-500 to-gray-500 bg-clip-text text-transparent"
+      >
+        I'm a web developer
+      </p>
+    </div>
+
+    <main>
+      <p
+        class="text-center wave-font absoul font-bold bg-gradient-to-r from-gray-500 to-sky-500 bg-clip-text text-transparent"
+        id="anim"
+      >
+        Beyene
+      </p>
+      <!-- here the projects i build goes -->
+      <div class="">
+        <div class="border-l-8 pl-2 my-4 pt-4 border-indigo-500 rounded">
+          <h2 class="text-3xl font-bold">My projects</h2>
+          <p>These are the projects I've worked on</p>
+        </div>
+        <ul
+          class="list-disc list-inside p-8 flex flex-wrap justify-start gap-12"
+        >
+          <li
+            class="flex items-end gap-4 border border-gray-200 rounded hover:scale-105 transition-all px-2 py-6 cursor-pointer"
+          >
+            <img src="420.png" class="w-40 h-40 object-cover rounded" />
+            <div class="w-69">
+              <a
+                class="text-lg"
+                href="https://github.com/hope-dies-here/project-1"
+                >Random Movie Website</a
+              >
+            </div>
+          </li>
+
+          <li
+            class="flex items-end gap-4 border border-gray-200 rounded hover:scale-105 transition-all px-2 py-6 cursor-pointer"
+          >
+            <img src="420.png" class="w-40 h-40 object-cover rounded" />
+            <div class="w-69">
+              <a class="text-lg" href="https://the-name-random.vercel.app/"
+                >Name Random Group Website</a
+              >
+            </div>
+          </li>
+
+          <!-- <li>
+            <a href="https://github.com/DanielMiao1/project-2"
+              >My second project</a
+            >
+          </li> -->
+        </ul>
+      </div>
+
+      <div class="mt-8">
+        <div class="border-l-8 pl-2 my-4 pt-4 border-gray-500 rounded">
+          <h2 class="text-3xl font-bold">My contact details</h2>
+          <p class="py-2">
+            My email address is
+            <a href="mailto:onyourleftpal@gmail.com">onyourleftpal@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </main>
+    <script>
+      const words = [
+        "WubbaLubbaDubDub",
+        "PickleRick",
+        "Morty",
+        "Rick",
+        "Meeseeks",
+        "Schwifty",
+        "PortalGun",
+        "Gazorpazorp",
+        "Birdperson",
+        "MrPoopybutthole",
+        "Interdimensional",
+        "Plumbus",
+        "Squanchy",
+        "Beth",
+        "Summer",
+        "Jerry",
+        "EvilMorty",
+        "RiggityRiggityWrecked",
+        "Cronenberg",
+        "Citadel",
+        "ButterRobot",
+        "Unity",
+        "ScaryTerry",
+        "Snuffles",
+        "Gearhead",
+      ];
+
+      const container = document.getElementById("anim");
+
+      // Initial render
+      function renderWords(arr) {
+        container.innerHTML = "";
+        arr.forEach((word) => {
+          const span = document.createElement("span");
+          span.textContent = word;
+          span.style.margin = "5px";
+          container.appendChild(span);
+        });
+      }
+
+      // Fisher-Yates Shuffle
+      function shuffle(array) {
+        let currentIndex = array.length,
+          randomIndex;
+
+        while (currentIndex !== 0) {
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+
+          // Swap
+          [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex],
+            array[currentIndex],
+          ];
+        }
+
+        return array;
+      }
+
+      // Start changing positions every 100ms
+      setInterval(() => {
+        const shuffled = shuffle([...words]); // Clone before shuffle
+        renderWords(shuffled);
+      }, 100);
+    </script>
+  </body>
+</html>
