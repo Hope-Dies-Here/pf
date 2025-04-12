@@ -183,8 +183,11 @@ let musicOn = false;
 const wave = document.getElementById("music-greet-msg");
 const playBtnContainer = document.getElementById("play-btn-container");
 
+// playBtn.addEventListener("click", playSong);
+// pauseBtn.addEventListener("click", playSong);
 playBtnContainer.addEventListener("click", function () {
   if (musicOn) {
+    musicOn = false;
     wave.classList.remove("wave-font");
     wave.classList.remove("text-2xl");
     wave.classList.add("dynapuff");
@@ -192,6 +195,7 @@ playBtnContainer.addEventListener("click", function () {
     clearInterval(interval);
     pauseSong();
   } else {
+    musicOn = true;
     const words = wave.innerText.split(" ");
     wave.classList.remove("dynapuff");
     wave.classList.add("wave-font");
@@ -199,7 +203,6 @@ playBtnContainer.addEventListener("click", function () {
     interval = startWave(wave, words);
     playSong();
   }
-  musicOn = !musicOn;
 });
 
 function showInfoBar() {
