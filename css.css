@@ -4,8 +4,10 @@
 
 .dynapyff{
     font-family: "DynaPuff" !important;
-
+    
 }
+
+
 
 .dynapuff{
     font-family: "DynaPuff" !important;
@@ -14,8 +16,14 @@
 main {
     font-family: "Josefin Sans" !important;
 }
+.sans {
+    font-family: "Josefin Sans" !important;
 
+}
 .wave-font {
     font-family: "Wavefont" !important;
     /* color: #464db4 */
+}
+#info-bar {
+    /* display: none !important; */
 }
