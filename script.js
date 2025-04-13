@@ -98,10 +98,10 @@ const info = document.getElementById("info-placeholder");
 projects.forEach((project) => {
   const projectCard = document.createElement("div");
   projectCard.innerHTML = `
-      <li class="group relative project h-59 flex items-end gap-6 border border-gray-200 bg-gray-50 rounded hover:scale-105 transition-all px-2 py-4 cursor-pointer">
-        <img src="420.png" class="w-40 h-40 object-cover rounded" />
+      <li class="group relative project min-h-[14rem] flex items-end gap-4 border border-gray-200 bg-gray-50 rounded hover:scale-105 transition-all px-2 pb-4 py-12 cursor-pointer">
+        <img src="420.png" class="w-[40%] h-[40%] object-cover rounded" />
         <div class="">
-          <p class="text-zinc-600">${project.description}</p>
+          <p class="text-zinc-600 text-xs">${project.description}</p>
           <a class="text-lg" href="${project.link}">${project.name}</a>
             <div
                 id="project-div-action-tooltip"

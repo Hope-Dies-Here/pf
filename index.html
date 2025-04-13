@@ -24,12 +24,12 @@
 
     <link rel="stylesheet" href="./css.css" />
     <title>Daniel's Profile</title>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
-    <link rel="stylesheet" href="output.css" />
+    <!-- <link rel="stylesheet" href="output.css" /> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="">
     <div
-      class="relative flex h-[100svh] items-center justify-evenly bg-gradient-to-r from-red-50 via-white to-red-50 p-8"
+      class="relative flex h-[100svh] items-center justify-evenly bg-gradient-to-r from-red-50 via-white to-red-50 p-0"
       id="header"
     >
       <div>
@@ -55,15 +55,15 @@
     id="play-btn-container"
       class="sticky bottom-4 left-0 flex items-start justify-start mx-4 my-8 w-fit hover:cursor-pointer"
     >
-      <div class="play-btn-container flex items-center gap-4 " >
+      <div class="play-btn-container flex items-center gap-4" >
         <button
-          class="play-btn transition-all hover:scale-105 "
+          class="play-btn transition-all hover:scale-110  hover:cursor-pointer"
           id="play-btn"
         >
           <img src="./play.png" class="h-12 w-12" />
         </button>
         <button
-          class="pause-btn hidden transition-all hover:scale-105 "
+          class="pause-btn hidden transition-all hover:scale-110 hover:cursor-pointer" 
           id="pause-btn"
         >
           <img src="./pause.png" class="h-12 w-12" />
@@ -91,37 +91,16 @@
           <h2 class="text-3xl font-bold">My projects</h2>
           <p>These are the projects I've worked on</p>
         </div>
-        <div class="relative grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div class="relative grid gap-4 ">
           <ul
             id="projects"
-            class="col-span-10 grid h-fit list-inside list-disc grid-cols-3 justify-start gap-12 p-8"
+            class=" grid grid-cols-[repeat(auto-fit,minmax(20rem,_1fr))] h-fit list-inside list-disc justify-start gap-8 p-8"
           >
-            <li
-              class="group relative flex h-59 cursor-pointer items-end gap-6 rounded border border-gray-200 bg-gray-50 px-2 py-4 transition-all hover:scale-105"
-            >
-              <img src="420.png" class="h-40 w-40 rounded object-cover" />
-              <div class="">
-                <p class="text-zinc-600">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Iusto voluptatum magnam nemo, ratione eum eos.
-                </p>
-                <a
-                  class="text-lg"
-                  href="https://github.com/hope-dies-here/project-1"
-                  >Random Movie Website</a
-                >
-                <div
-                  id="project-div-action-tooltip"
-                  class="pointer-events-none absolute top-1 right-1 rounded-lg bg-yellow-300 px-4 py-2 text-sm text-gray-800 opacity-0 group-hover:opacity-100"
-                >
-                  <p>Click to see more info</p>
-                </div>
-              </div>
-            </li>
+         
           </ul>
           <div
             id="info-bar"
-            class="pointer-events-none fixed right-[1%] bottom-0 col-span-3 my-8 h-fit max-h-150 w-[28rem] overflow-y-auto rounded-lg border-3 border-white bg-indigo-50 text-gray-700 opacity-0 shadow-2xl transition-opacity duration-500"
+            class="pointer-events-none fixed right-[1%] bottom-0 col-span-3 my-8 h-fit max-h-[90%] w-[28rem] overflow-y-auto rounded-lg border-3 border-white bg-indigo-50 text-gray-700 opacity-0 shadow-2xl transition-opacity duration-500"
           >
             <div
               class="relative flex items-center justify-between bg-gray-700 px-3 py-3"
@@ -201,7 +180,7 @@
       </div>
 
       <!-- dock left -->
-      <div class="fixed top-[35%] bottom-0 left-0">
+      <div class="fixed top-[35%] bottom-0 left-0 h-fit">
         <div
           class="ml-2 flex w-fit flex-col items-center justify-center gap-4 rounded-full bg-gray-800 bg-center px-2 py-8 opacity-80"
         >
