@@ -29,7 +29,7 @@
   </head>
   <body class="max-w-[1800px] mx-auto">
     <div
-      class="relative flex h-[100svh] items-center justify-evenly bg-gradient-to-r from-red-50 via-white to-red-50 p-0"
+      class="relative flex h-[100svh] items-center justify-evenly bg-gradient-to-r from-pink-50 via-white to-pink-50 p-0"
       id="header"
     >
       <div>
@@ -53,7 +53,7 @@
 
     <div
     id="play-btn-container"
-      class="sticky bottom-4 left-0 flex items-start justify-start mx-4 my-8 w-fit hover:cursor-pointer"
+      class="sticky bottom-4 left-0 flex shadow border-gray-50 border rounded-full px-6 py-2 w-120 mx-auto items-start justify-start my-8 hover:cursor-pointer"
     >
       <div class="play-btn-container flex items-center gap-4" >
         <button
@@ -91,24 +91,53 @@
           <h2 class="text-3xl font-bold">My projects</h2>
           <p>These are the projects I've worked on</p>
         </div>
-        <div class="flex justify-center items-center text-center gap-8">
-          <div class="h-2 w-80 bg-indigo-700 rounded-full"></div>
+        <div class="flex justify-start items-center  gap-4 w-[90%] mx-auto">
+          <div class=" bg-gray-700 opacity-90 rounded w-[2%] h-20"></div>
           <div>
             <h2 class="text-3xl font-bold">My projects</h2>
             <p>These are the projects I've worked on</p>
           </div>
-          <div class="h-2 w-80 bg-purple-500 rounded-full"></div>
+          <div class="h-2 hidden w-80 bg-purple-500 rounded-full"></div>
         </div>
-        <div class="relative grid gap-4 ">
+        <div class="relative grid gap-4 w-full my-8">
           <ul
-            id="projects"
-            class=" grid grid-cols-[repeat(auto-fit,minmax(20rem,_1fr))] h-fit list-inside list-disc justify-start gap-8 p-8 sm:px-48"
+          id="projects"
+          class="border pt-25 sans border-gray-300 rounded-lg flex flex-wrap list-inside w-[90%] mx-auto list-disc items-start justify-center gap-8 p-8"
           >
-         
+          <div class="absolute flex items-center justify-between px-4 rounded-t top-0 h-12 w-[90%] left-1/2 -translate-x-1/2 bg-gray-900 opacity-69">
+            <div class="m-0 flex items-center gap-3">
+              <div
+                id="close-info-bar"
+                onclick="hideInfoBar()"
+                onmousemove="this.style.cursor = 'pointer'"
+                class="group relative h-4 w-4 rounded-full bg-red-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  fill="none"
+                  stroke="black"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </div>
+              <div class="group h-4 w-4 rounded-full bg-yellow-500"></div>
+              <div class="h-4 w-4 rounded-full bg-green-500"></div>
+            </div>
+            <div>
+              <p class="text-white sans font-bold">My Projects</p>
+            </div>
+          </div>
+        
           </ul>
           <div
             id="info-bar"
-            class="pointer-events-none fixed right-[1%] bottom-0 col-span-3 my-8 h-fit max-h-[90%] w-[28rem] overflow-y-auto rounded-lg border-3 border-white bg-indigo-50 text-gray-700 opacity-0 shadow-2xl transition-opacity duration-500"
+            class="pointer-events-none sans absolute right-[1%] md:bottom-0 sm:top-2 col-span-3 my-8 h-fit max-h-[90svh] sm:w-[100%] md:w-[28rem] lg:w-[45%] overflow-y-auto rounded-lg border-3 border-white bg-indigo-50 text-gray-700 opacity-0 shadow-2xl transition-opacity duration-500"
           >
             <div
               class="relative flex items-center justify-between bg-gray-700 px-3 py-3"
@@ -215,7 +244,7 @@
       </div>
     </div>
 
-    <div class="opacity-80   fixed top-2 left-2 bg-violet-800 text-white px-8 py-2 rounded-full text-sm text-center">
+    <div class="opacity-80 hidden fixed top-2 left-2 bg-violet-800 text-white px-8 py-2 rounded-full text-sm text-center">
       <p>this page is under construction</p>
       <p> If the page looks big zoom out to 90% or 80%... </p>
     <script src="./script.js"></script>

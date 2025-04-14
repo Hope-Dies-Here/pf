@@ -64,28 +64,88 @@ function startWave(container, words) {
 
 const projects = [
   {
-    name: "Random Movie Website",
+    name: "Movie ",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
     link: "https://github.com/hope-dies-here/project-1",
+    image: "./420.png",
   },
   {
     name: "Random Blog Website",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
     link: "https://github.com/hope-dies-here/project-1",
-  },
-  {
-    name: "Repository ",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
-    link: "https://github.com/hope-dies-here/project-1",
+    image: "./terminal.png",
   },
   {
     name: "Color Swap",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
     link: "https://github.com/hope-dies-here/project-1",
+    image: "./420.png",
+  },
+  {
+    name: "Repository ",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
+    link: "https://github.com/hope-dies-here/project-1",
+    image: "./chrome.png",
+  },
+  {
+    name: "Random Blog Website",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
+    link: "https://github.com/hope-dies-here/project-1",
+    image: "./terminal.png",
+  },
+  {
+    name: "Movie ",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
+    link: "https://github.com/hope-dies-here/project-1",
+    image: "./420.png",
+  },
+  {
+    name: "Color Swap",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
+    link: "https://github.com/hope-dies-here/project-1",
+    image: "./420.png",
+  },
+  {
+    name: "Repository ",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
+    link: "https://github.com/hope-dies-here/project-1",
+    image: "./chrome.png",
+  },
+  {
+    name: "Random Blog Website",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
+    link: "https://github.com/hope-dies-here/project-1",
+    image: "./terminal.png",
+  },
+  {
+    name: "Movie ",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
+    link: "https://github.com/hope-dies-here/project-1",
+    image: "./420.png",
+  },
+  {
+    name: "Repository ",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
+    link: "https://github.com/hope-dies-here/project-1",
+    image: "./chrome.png",
+  },
+  {
+    name: "Color Swap",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
+    link: "https://github.com/hope-dies-here/project-1",
+    image: "./420.png",
   },
 ];
 
@@ -97,20 +157,11 @@ const info = document.getElementById("info-placeholder");
 
 projects.forEach((project) => {
   const projectCard = document.createElement("div");
+
   projectCard.innerHTML = `
-      <li class="group relative project min-h-[14rem] flex items-end gap-4 border border-gray-200 bg-gray-50 rounded hover:scale-105 transition-all px-2 pb-4 py-12 cursor-pointer">
-        <img src="420.png" class="w-[40%] h-[40%] object-cover rounded" />
-        <div class="">
-          <p class="text-zinc-600 text-xs">${project.description}</p>
-          <a class="text-lg" href="${project.link}">${project.name}</a>
-            <div
-                id="project-div-action-tooltip"
-                class="transition-all duration-500pointer-events-none absolute top-1 right-1 rounded-lg bg-yellow-300 px-4 py-2 text-sm text-gray-800 opacity-0 group-hover:opacity-100"
-                >
-                <p>Click to see more info</p>
-            </div>
-        </div>
-        
+      <li class=" text-black group relative project w-45 h-40 grid items-center justify-center rounded hover:scale-105 transition-all cursor-pointer">
+        <img src="./img/dir.png" class=" object-cover rounded w-[90%] h-[90%] mx-auto" />
+          <a class="text-sm text-center" href="${project.link}">${project.name}</a>
       </li>
     `;
   projectsContainer.appendChild(projectCard);
