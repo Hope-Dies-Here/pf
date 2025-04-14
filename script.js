@@ -26,6 +26,7 @@ const words = [
   "Gearhead",
 ];
 
+
 const container = document.getElementById("anim");
 function startWave(container, words) {
   function renderWords(arr) {
@@ -159,9 +160,9 @@ projects.forEach((project) => {
   const projectCard = document.createElement("div");
 
   projectCard.innerHTML = `
-      <li class=" text-black group relative project w-45 h-40 grid items-center justify-center rounded hover:scale-105 transition-all cursor-pointer">
+      <li class=" text-black group relative project w-40 h-40 grid items-center justify-center rounded hover:scale-105 transition-all cursor-pointer">
         <img src="./img/dir.png" class=" object-cover rounded w-[90%] h-[90%] mx-auto" />
-          <a class="text-sm text-center" href="${project.link}">${project.name}</a>
+          <a class="text-sm text-center font-semibold text-gray-900" href="${project.link}">${project.name}</a>
       </li>
     `;
   projectsContainer.appendChild(projectCard);
@@ -193,13 +194,11 @@ projectCards.forEach((card) => {
         }
       }, 0);
     });
-    console.log();
 
     // infoBar.innerText = card.innerText;
   });
 
   card.addEventListener("mouseout", () => {
-    console.log("mouseout");
     document.querySelector("body").style = "opacity: 1";
   });
 });
@@ -269,8 +268,6 @@ function hideInfoBar() {
   infoBar.classList.add("opacity-0");
   infoBar.classList.add("pointer-events-none");
 }
-
-console.log(window.innerWidth);
 
 const size = Math.floor(window.innerWidth / 45);
 

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -75,14 +75,31 @@
           Enjoy good music while you are here
         </p>
       </div>
-
+<!-- 
+      <iframe
+        width="100%"
+        height="166"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1678142061&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+      >
+      </iframe> -->
       <audio controls class="hidden bg-amber-700" id="audio">
         <source
-          src="./audio/Wegdayit - Endalehu Alehu .mp3"
-          type="audio/mpeg"
+        src="./audio/Wegdayit - Endalehu Alehu .mp3"
+        type="audio/mpeg"
         />
       </audio>
     </div>
+    <!-- <iframe
+      style="border-radius: 12px"
+      src="https://open.spotify.com/embed/track/3u42Ww55XhLTdzESriYaX0?utm_source=generator&theme=0"
+      width="250"
+      height="80"
+    class="float-right"
+      loading="lazy"
+    ></iframe> -->
 
     <main class="border-t border-gray-300 p-8 py-8 pt-12">
       <!-- here the projects i build goes -->
@@ -102,7 +119,7 @@
         <div class="relative my-8 grid w-full gap-4">
           <ul
             id="projects"
-            class="sans mx-auto flex w-[90%] list-inside list-disc flex-wrap items-start justify-center gap-8 rounded-lg border border-gray-300 p-8 pt-25"
+            class="sans mx-auto flex w-[90%] list-inside list-disc flex-wrap items-start justify-start gap-4 rounded-lg border border-gray-300 p-8 pt-25"
           >
             <div
               class="absolute top-0 left-1/2 flex h-12 w-[90%] -translate-x-1/2 items-center justify-between rounded-t bg-gray-900 px-4 opacity-69"
@@ -138,7 +155,7 @@
           </ul>
           <div
             id="info-bar"
-            class="sans pointer-events-none absolute right-[1%] col-span-3 my-8 h-fit max-h-[90svh] overflow-y-auto rounded-lg border-3 border-white bg-indigo-50 text-gray-700 opacity-0 shadow-2xl transition-opacity duration-500 sm:top-2 sm:w-[100%] md:bottom-0 md:w-[28rem] lg:w-[45%]"
+            class="sans pointer-events-none fixed right-[2%] lg:right-[5%] col-span-3 my-8 h-fit max-h-[90svh] overflow-y-auto rounded-lg border border-gray-700 bg-indigo-50 text-gray-700 opacity-0 shadow-2xl transition-opacity duration-500 sm:top-2 sm:w-[100%] md:bottom-0 md:w-[28rem] lg:w-[45%]"
           >
             <div
               class="relative flex items-center justify-between bg-gray-700 px-3 py-3"
