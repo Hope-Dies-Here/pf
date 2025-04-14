@@ -269,3 +269,13 @@ function hideInfoBar() {
   infoBar.classList.add("opacity-0");
   infoBar.classList.add("pointer-events-none");
 }
+
+console.log(window.innerWidth);
+
+const size = Math.floor(window.innerWidth / 45);
+
+for (let i = 0; i < size; i++) {
+  const div = document.createElement("div");
+  div.innerHTML = `<img src="./img/const1.png" class="w-10" />`;
+  document.querySelector("#const").appendChild(div);
+}
