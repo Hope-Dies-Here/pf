@@ -26,7 +26,6 @@ const words = [
   "Gearhead",
 ];
 
-
 const container = document.getElementById("anim");
 function startWave(container, words) {
   function renderWords(arr) {
@@ -160,9 +159,9 @@ projects.forEach((project) => {
   const projectCard = document.createElement("div");
 
   projectCard.innerHTML = `
-      <li class=" text-black group relative project w-40 h-40 grid items-center justify-center rounded hover:scale-105 transition-all cursor-pointer">
+      <li class=" text-black group relative project w-45 h-40 grid items-center justify-center rounded hover:scale-105 transition-all cursor-pointer">
         <img src="./img/dir.png" class=" object-cover rounded w-[90%] h-[90%] mx-auto" />
-          <a class="text-sm text-center font-semibold text-gray-900" href="${project.link}">${project.name}</a>
+          <a class="text-sm text-center" href="${project.link}">${project.name}</a>
       </li>
     `;
   projectsContainer.appendChild(projectCard);
@@ -176,7 +175,6 @@ projectCards.forEach((card) => {
     infoBar.classList.remove("opacity-0");
     infoBar.classList.add("opacity-100");
     infoBar.classList.add("pointer-events-auto");
-    document.querySelector("body").style = "opacity: 0.9";
     info.innerText = "";
     const beyene = projects[0].description;
     // info.innerText = beyene;
@@ -194,12 +192,36 @@ projectCards.forEach((card) => {
         }
       }, 0);
     });
+    console.log();
 
     // infoBar.innerText = card.innerText;
   });
+});
+const titleBar = document.getElementById("title-bar");
 
-  card.addEventListener("mouseout", () => {
-    document.querySelector("body").style = "opacity: 1";
+let isHolding = false;
+const doubleClickThreshold = 500; // ms
+
+titleBar.addEventListener("mousedown", (event) => {
+  event.preventDefault();
+
+  // infoBar.style = `opacity: .4; user-select: none; top: ${event.clientY}px; left: ${event.clientX}px;`;
+  isHolding = true;
+
+  const positions = infoBar.getBoundingClientRect();
+  let xDiff = event.clientX - positions.left;
+  let yDiff = event.clientY - positions.top;
+
+  document.addEventListener("mousemove", (event) => {
+    if (isHolding) {
+      infoBar.style.left = event.clientX - xDiff + "px";
+      infoBar.style.top = event.clientY - yDiff + "px";
+      console.log(isHolding);
+      document.addEventListener("mouseup", () => {
+        isHolding = false;
+        infoBar.style = `top: ${event.clientY - yDiff}px; left: ${event.clientX - xDiff}px;`;
+      });
+    }
   });
 });
 
@@ -268,6 +290,8 @@ function hideInfoBar() {
   infoBar.classList.add("opacity-0");
   infoBar.classList.add("pointer-events-none");
 }
+
+console.log(window.innerWidth);
 
 const size = Math.floor(window.innerWidth / 45);
 
