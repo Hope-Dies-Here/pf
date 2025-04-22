@@ -212,16 +212,17 @@ titleBar.addEventListener("mousedown", (event) => {
   let xDiff = event.clientX - positions.left;
   let yDiff = event.clientY - positions.top;
 
+  console.log(xDiff, yDiff);
   document.addEventListener("mousemove", (event) => {
     if (isHolding) {
       document.body.style = " pointer-events: none; cursor: move;";
       titleBar.style = "cursor: move";
       infoBar.style.left = event.clientX - xDiff + "px";
-      infoBar.style.top = event.clientY - yDiff + "px";
+      infoBar.style.top = event.clientY - yDiff - 32 + "px";
       console.log(isHolding);
       document.addEventListener("mouseup", () => {
         isHolding = false;
-        infoBar.style = `top: ${event.clientY - yDiff}px; left: ${
+        infoBar.style = `top: ${event.clientY - yDiff - 32}px; left: ${
           event.clientX - xDiff
         }px;`;
         titleBar.style = "cursor: default";
