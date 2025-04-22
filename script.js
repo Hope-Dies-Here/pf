@@ -160,8 +160,8 @@ projects.forEach((project) => {
 
   projectCard.innerHTML = `
       <li class=" text-black group relative project w-45 h-40 grid items-center justify-center rounded hover:scale-105 transition-all cursor-pointer">
-        <img src="./img/dir.png" class=" object-cover rounded w-4=30 h-30 mx-auto" />
-          <a class="text-sm text-center" href="${project.link}">${project.name}</a>
+        <img src="./img/dir.png" class=" object-cover rounded w-35 h-30 mb-0 mx-auto" />
+          <a class="text-md font-semibold text-center -mt-5" href="${project.link}">${project.name}</a>
       </li>
     `;
   projectsContainer.appendChild(projectCard);
