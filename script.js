@@ -160,7 +160,7 @@ projects.forEach((project) => {
 
   projectCard.innerHTML = `
       <li class=" text-black group relative project w-45 h-40 grid items-center justify-center rounded hover:scale-105 transition-all cursor-pointer">
-        <img src="./img/dir.png" class=" object-cover rounded w-[90%] h-[90%] mx-auto" />
+        <img src="./img/dir.png" class=" object-cover rounded w-4=30 h-30 mx-auto" />
           <a class="text-sm text-center" href="${project.link}">${project.name}</a>
       </li>
     `;
@@ -214,12 +214,18 @@ titleBar.addEventListener("mousedown", (event) => {
 
   document.addEventListener("mousemove", (event) => {
     if (isHolding) {
+      document.body.style = " pointer-events: none; cursor: move;";
+      titleBar.style = "cursor: move";
       infoBar.style.left = event.clientX - xDiff + "px";
       infoBar.style.top = event.clientY - yDiff + "px";
       console.log(isHolding);
       document.addEventListener("mouseup", () => {
         isHolding = false;
-        infoBar.style = `top: ${event.clientY - yDiff}px; left: ${event.clientX - xDiff}px;`;
+        infoBar.style = `top: ${event.clientY - yDiff}px; left: ${
+          event.clientX - xDiff
+        }px;`;
+        titleBar.style = "cursor: default";
+        document.body.style = "pointer-events: auto; cursor: default; ";
       });
     }
   });

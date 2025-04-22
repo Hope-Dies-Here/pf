@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -102,7 +102,7 @@
         <div class="relative my-8 grid w-full gap-4">
           <ul
             id="projects"
-            class="sans mx-auto flex w-[90%] list-inside list-disc flex-wrap items-start justify-start gap-8 rounded-lg border border-gray-300 p-8 pt-25"
+            class="sans mx-auto flex w-[90%] min-h-150 list-inside list-disc flex-wrap items-start justify-start gap-8 rounded-lg border border-gray-300 p-8 pt-25"
           >
             <div
               class="absolute top-0 left-1/2 flex h-12 w-[90%] -translate-x-1/2 items-center justify-between rounded-t bg-gray-900 px-4 opacity-69"
@@ -138,43 +138,47 @@
           </ul>
           <div
             id="info-bar"
-            class="sans pointer-events-none fixed right-[1%] col-span-3 my-8 h-fit max-h-[90svh] overflow-y-auto rounded-lg border-3 border-white bg-indigo-50 text-gray-700 opacity-0 shadow-2xl transition-opacity duration-500 sm:top-2 sm:w-[100%] md:bottom-0 md:w-[28rem] lg:w-[45%]"
+            class="sans pointer-events-none fixed right-[1%] col-span-3 my-8 h-fit max-h-150 rounded-lg border-3 border-white bg-indigo-50 text-gray-700 opacity-0 shadow-2xl transition-opacity duration-500 sm:top-2 sm:w-[100%] md:bottom-0 md:w-[28rem] lg:w-[45%]"
           >
-            <div
-              id="title-bar"
-              class="relative flex items-center justify-between bg-gray-700 px-3 py-3"
-            >
-              <div class="m-0 flex items-center gap-3">
+            <div class="relative">
+              <div class="sticky top-0 left-0 right-0">
                 <div
-                  id="close-info-bar"
-                  onclick="hideInfoBar()"
-                  onmousemove="this.style.cursor = 'pointer'"
-                  class="group relative h-4 w-4 rounded-full bg-red-500"
+                  id="title-bar"
+                  class="relative flex items-center justify-between bg-gray-700 px-3 py-3"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="14"
-                    fill="none"
-                    stroke="black"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  >
-                    <line x1="18" y1="6" x2="6" y2="18" />
-                    <line x1="6" y1="6" x2="18" y2="18" />
-                  </svg>
+                  <div class="m-0 flex items-center gap-3">
+                    <div
+                      id="close-info-bar"
+                      onclick="hideInfoBar()"
+                      onmousemove="this.style.cursor = 'pointer'"
+                      class="group relative h-4 w-4 rounded-full bg-red-500"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="black"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                      >
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                      </svg>
+                    </div>
+                    <div class="group h-4 w-4 rounded-full bg-yellow-500"></div>
+                    <div class="h-4 w-4 rounded-full bg-green-500"></div>
+                  </div>
+                  <div>
+                    <p class="text-white">Project Info</p>
+                  </div>
                 </div>
-                <div class="group h-4 w-4 rounded-full bg-yellow-500"></div>
-                <div class="h-4 w-4 rounded-full bg-green-500"></div>
               </div>
-              <div>
-                <p class="text-white">Project Info</p>
-              </div>
+              <p class="p-4 h-130 overflow-y-auto" id="info-placeholder">
+                Click on one of the project and overview will be shown here
+              </p>
             </div>
-            <p class="p-4" id="info-placeholder">
-              Click on one of the project and overview will be shown here
-            </p>
           </div>
         </div>
       </div>
