@@ -307,3 +307,7 @@ for (let i = 0; i < size; i++) {
   div.innerHTML = `<img src="./img/const1.png" class="w-10" />`;
   document.querySelector("#const").appendChild(div);
 }
+
+document.addEventListener("click", () => {
+  document.getElementById("clickSound").play();
+});
