@@ -68,77 +68,78 @@ const projects = [
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
     link: "https://github.com/hope-dies-here/project-1",
-    image: "./420.png",
+    image: "./img/movie.png",
   },
   {
     name: "Random Blog Website",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
     link: "https://github.com/hope-dies-here/project-1",
-    image: "./terminal.png",
+    image: "./img/blog.png",
   },
   {
     name: "Color Swap",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
     link: "https://github.com/hope-dies-here/project-1",
-    image: "./420.png",
+    image: "./img/color.png",
   },
   {
     name: "Repository ",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
     link: "https://github.com/hope-dies-here/project-1",
-    image: "./chrome.png",
+    image: "./img/dir.png",
   },
   {
     name: "Random Blog Website",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
     link: "https://github.com/hope-dies-here/project-1",
-    image: "./terminal.png",
+    image: "./img/blog.png",
   },
+  
   {
-    name: "Movie ",
+    name: "Repository ",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
     link: "https://github.com/hope-dies-here/project-1",
-    image: "./420.png",
+    image: "./img/dir.png",
   },
   {
     name: "Color Swap",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
     link: "https://github.com/hope-dies-here/project-1",
-    image: "./420.png",
-  },
-  {
-    name: "Repository ",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
-    link: "https://github.com/hope-dies-here/project-1",
-    image: "./chrome.png",
-  },
-  {
-    name: "Random Blog Website",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
-    link: "https://github.com/hope-dies-here/project-1",
-    image: "./terminal.png",
+    image: "./img/color.png",
   },
   {
     name: "Movie ",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
     link: "https://github.com/hope-dies-here/project-1",
-    image: "./420.png",
+    image: "./img/movie.png",
+  },
+  {
+    name: "Random Blog Website",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
+    link: "https://github.com/hope-dies-here/project-1",
+    image: "./img/blog.png",
+  },
+  {
+    name: "Movie ",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
+    link: "https://github.com/hope-dies-here/project-1",
+    image: "./img/movie.png",
   },
   {
     name: "Repository ",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto voluptatum magnam nemo, ratione eum eos.",
     link: "https://github.com/hope-dies-here/project-1",
-    image: "./chrome.png",
+    image: "./img/const.png",
   },
   {
     name: "Color Swap",
@@ -160,7 +161,7 @@ projects.forEach((project) => {
 
   projectCard.innerHTML = `
       <li class=" text-black group relative project w-45 h-40 grid items-center justify-center rounded hover:scale-105 transition-all cursor-pointer">
-        <img src="./img/dir.png" class=" object-cover rounded w-35 h-30 mb-0 mx-auto" />
+        <img src="${project.image}" class=" object-cover rounded w-35 h-30 mb-0 mx-auto" />
           <a class="text-md font-semibold text-center -mt-5" href="${project.link}">${project.name}</a>
       </li>
     `;
