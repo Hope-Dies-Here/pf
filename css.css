@@ -1,3 +1,6 @@
+body {
+    overflow-x: clip;
+}
 #header {
     font-family: "DynaPuff" !important;
 }
@@ -20,10 +23,32 @@ main {
     font-family: "Josefin Sans" !important;
 
 }
+.mono {
+    font-family: monospace;
+}
 .wave-font {
     font-family: "Wavefont" !important;
     /* color: #464db4 */
 }
 #info-bar {
     /* display: none !important; */
+}
+
+#about-me {
+    
+}
+
+#about-me:hover {
+    animation: bring-to-front 0.7s ease-in-out forwards;
+}
+
+@keyframes bring-to-front {
+    50% {
+        z-index: 1;
+        transform: translateX(80px);
+    }
+    100% {
+        transform: translateX(0px);
+        z-index: 99;
+    }
 }
