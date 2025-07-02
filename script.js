@@ -312,3 +312,13 @@ for (let i = 0; i < size; i++) {
 document.addEventListener("click", () => {
   document.getElementById("clickSound").play();
 });
+
+
+const hobbies = document.getElementById("hobbies");
+window.addEventListener("scroll", () => {
+  
+  let newHeight = window.scrollY;
+  if(newHeight > 200) newHeight = 100
+  
+  hobbies.style.height = `${newHeight > 200 ? 200 : newHeight}px`;
+})

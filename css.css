@@ -1,5 +1,5 @@
 body {
-    overflow-x: clip;
+    /* min-width: 1180px; */
 }
 #header {
     font-family: "DynaPuff" !important;
@@ -39,7 +39,31 @@ main {
 }
 
 #about-me:hover {
-    animation: bring-to-front 0.7s ease-in-out forwards;
+    animation: bring-to-front 0.5s ease-out forwards;
+}
+
+#hobbies {
+    height: 10px;
+    max-height: 210px !important;
+    overflow-y: hidden;
+    display: none;
+    /* width: 1px !important; */
+}
+
+#hover-here {
+    animation: move 2s ease-in-out infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0px);
+    } 
+    50% {
+        transform: translateX(8px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
 }
 
 @keyframes bring-to-front {

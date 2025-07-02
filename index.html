@@ -29,7 +29,7 @@
   </head>
   <body class="mx-auto max-w-[1800px]">
     <div
-      class="relative flex h-[100svh] items-center justify-evenly bg-gradient-to-r from-pink-50 via-white to-pink-50 p-0"
+      class="relative overflow-x-clip flex h-[100svh] items-center justify-evenly bg-gradient-to-r from-pink-50 via-white to-pink-50 p-0"
       id="header"
     >
       <div>
@@ -47,12 +47,13 @@
       <div
         class="z-2 rounded-lg bg-gradient-to-r from-black via-white via-50% to-black p-1 shadow-md shadow-gray-300 transition-all duration-500 hover:from-gray-500 hover:via-purple-500 hover:to-sky-400"
       >
-        <img src="./image.png" class="border- w-69 rounded-lg" />
+        <img src="./beyu.png" class="border- w-69 rounded-lg" />
       </div>
       <div
         id="about-me"
         class="absolute top-15 right-[1%] rounded-lg bg-gradient-to-r from-blue-300 via-pink-300 via-50% to-blue-600 p-1 shadow-md shadow-gray-300 transition-all duration-500 hover:from-gray-500 hover:via-purple-500 hover:to-sky-400 cursor-pointer"
       >
+      <span class="absolute -top-5 left-1/2 mono opacity-70" id="hover-here">Hover here</span>
         <p class="bg-white p-5 mono rounded-lg"> 
           { <br/> 
             <span class="pl-3"> <span class="text-green-600">fullName</span>: '<span class="text-amber-600">Daniel Temesgen</span>',</span> <br/> 
@@ -68,7 +69,13 @@
         <p class="bg-white p-5 mono rounded-lg"> { <br/> <span class="pl-3"> funFact: 'This website tells more about me than my grades', </span> <br/> } </p>
       </div>
       <div
-        class="absolute top-135 left-35 -rotate-20 rounded-lg bg-gradient-to-r from-blue-300 via-black via-50% to-blue-600 p-1 shadow-md shadow-gray-300 transition-all duration-500 hover:from-gray-500 hover:via-purple-500 hover:to-sky-400"
+        class="absolute top-115 left-15 rounded-lg bg-gradient-to-r from-blue-300 via-red-300 via-50% to-blue-600 p-1 shadow-md shadow-gray-300 transition-all duration-500 hover:from-gray-500 hover:via-purple-500 hover:to-sky-400"
+      >
+        <p class="bg-white p-5 mono rounded-lg"> { <br/> <span class="pl-3"> randomQuote: 'Backend Developer', </span> <br/> } </p>
+      </div>
+      <div
+        id="hobbies"
+        class="absolute top-135 left-35 -rotate-4 rounded-lg bg-gradient-to-r from-blue-300 via-black via-50% to-blue-600 p-1 shadow-md shadow-gray-300 transition-all duration-500 hover:from-gray-500 hover:via-purple-500 hover:to-sky-400"
       >
         <p class="bg-white p-5 mono rounded-lg"> { <br/>  <span class="pl-3"> hobbies: [ 'I like music', 'Code'] </span> <br/> } </p>
       </div>
@@ -273,9 +280,13 @@
       </div>
     </div>
 
-    <div class="fixed right-2 bottom-3 opacity-30">
+    <div class=" fixed right-2 bottom-3 opacity-50 z-99">
       <p>This page is under construction</p>
       <img src="./img/const.png" class="w-50" />
+    </div>
+    <div class="hidden fixed left-20 bottom-3 opacity-50">
+      <p>This page is under construction</p>
+      <img src="./img/const.png" class="w-50 transform scale-x-[-1]" />
     </div>
     <div
       class="fixed bottom-0 flex hidden w-full items-center justify-center gap-1 opacity-40"
